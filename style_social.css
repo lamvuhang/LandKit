@@ -1,0 +1,15 @@
+.wrapper {
+  border-top: 1px solid #c2cff9;
+  border-bottom: 1px solid #c2cff9;
+  padding: 50px 0px;
+  margin-top: 100px;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social .social-item img {
+  width: 130px;
+}

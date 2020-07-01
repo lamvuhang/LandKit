@@ -1,0 +1,61 @@
+.welcome {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.welcome .content {
+  width: 40%;
+}
+
+.welcome .content .title p {
+  font-size: 43px;
+  padding: 3px;
+}
+
+.welcome .content .text {
+  font-size: 19px;
+  color: #8b9ebb;
+  padding-top: 20px;
+  line-height: 1.5;
+}
+
+.welcome .content .button {
+  padding-top: 70px;
+}
+
+.welcome .content .button a {
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.welcome .content .button a:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s;
+}
+
+.welcome .content .button .dark {
+  background-color: #335eea;
+  color: white;
+}
+
+.welcome .content .button .dark:hover {
+  background-color: #1746e0;
+}
+
+.welcome .content .button .light {
+  background-color: rgba(51, 94, 234, 0.1);
+  color: #335eea;
+}
+.welcome .content .button .light:hover {
+  background-color: rgba(51, 94, 234, 0.15);
+}
+
+.welcome .image {
+  width: 60%;
+}
+
+.welcome .image img {
+  width: 100%;
+}

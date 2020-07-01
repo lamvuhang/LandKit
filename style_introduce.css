@@ -1,0 +1,25 @@
+.introduce {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.introduce .intro-item {
+  width: 30%;
+}
+
+.introduce .intro-item .icon img {
+  width: 45px;
+}
+
+.introduce .intro-item .title {
+  font-size: 18px;
+  color: #c2cff9;
+  margin-top: 10px;
+}
+
+.introduce .intro-item .content {
+  font-size: 16px;
+  color: #8b9ebb;
+  margin-top: 15px;
+}
