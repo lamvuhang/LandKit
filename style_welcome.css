@@ -25,7 +25,7 @@
 }
 
 .welcome .content .button a {
-  padding: 10px 20px;
+  padding: 20px 30px;
   border-radius: 10px;
   display: inline-block;
 }
@@ -50,6 +50,7 @@
 }
 .welcome .content .button .light:hover {
   background-color: rgba(51, 94, 234, 0.15);
+  box-shadow: 0 1.5rem 4rem rgba(22,28,45,.15);
 }
 
 .welcome .image {

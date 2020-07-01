@@ -1,8 +1,6 @@
 body {
   margin: 10px 0px !important;
   font-family: sans-serif;
-  font-size: 15px;
-  line-height: 1.5;
 }
 
 .container {
@@ -72,9 +70,10 @@ a {
   display: none;
   position: absolute;
   z-index: 2;
-  box-shadow: 0px 10px 15px 20px #f1f1f1;
+  box-shadow: 0 1.5rem 4rem rgba(22,28,45,.15);
   border-radius: 10px;
   margin-top: 10px;
+  background-color: white;
 }
 
 .header .dropdown .menu-content .wrap {
@@ -188,9 +187,11 @@ a {
   display: none;
   width: 100%;
   position: absolute;
-  left: 231px;
+  left: 239px;
   top: -6px;
-  box-shadow: 0px 10px 15px 20px #f1f1f1;
+  box-shadow: 0 1.5rem 4rem rgba(22,28,45,.15);
+  background-color: white;
+  border-radius: 10px;
 }
 
 .header .dropdown .menu-content .menu-item .item {

@@ -1,0 +1,38 @@
+.wrapper-customer{
+    background-color: #f1f1f1;
+    padding-top: 100px;
+}
+
+.customer{
+    
+}
+
+.customer .title {
+    text-align: center;
+}
+
+.customer .title .text1{
+    font-size: 30px;
+}
+
+.customer .title .text2{
+    color: #8b9ebb;
+    margin: 20px 0px;
+    line-height: 1.5;
+}
+
+.customer .slide{
+    display: flex;
+}
+
+.customer .slide .image{
+    width: 50%;
+}
+
+.customer .slide .image img{
+    width: 100%;
+}
+
+.customer .slide .content{
+    width: 50%;
+}

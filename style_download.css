@@ -1,0 +1,100 @@
+.wrapper-download{
+    background-color: #f1f1f1;
+    padding-top: 100px;
+}
+
+.download{
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+}
+
+.download .form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: white;
+    margin-right: 140px;
+    border-radius: 5px;
+}
+
+.download .form:hover{
+    transform: translateY(-5px);
+    transition: transform 0.3s;
+    box-shadow: 0 1.5rem 4rem rgba(22,28,45,.15);
+}
+
+.download .form .form-image img{
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.download .form .form-input{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.download .form .form-input .input-item{
+    border: none;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 10px 0px;
+    margin: 15px 20px;
+    font-size: 16px;
+    color: #8b9ebb;
+}
+
+.download .form .submit{
+    margin: 30px;
+}
+
+.download .form .submit a{
+    color: white;
+    background-color: #42ba96;
+    padding: 15px 90px;
+    border-radius: 5px;
+    text-align: center;
+    display: block;
+    width: max-content;
+}
+
+.download .form .submit a:hover{
+    background-color: #389e7f;
+    transform: translateY(-5px);
+    transition: transform 0.3s;
+}
+
+.download .content{
+    width: 50%;
+}
+
+.download .content .title{
+    font-size: 30px;
+}
+
+.download .content .text{
+    line-height: 1.5;
+    color: #8b9ebb;
+    margin: 20px 0px;
+}
+
+.download .content .list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.download .content .list .list-item {
+    color: #42ba96;
+    margin: 15px 0px;
+}
+
+.download .content .list .list-item i{
+    color: #42ba96;
+    font-size: 13px;
+    font-weight: 400;
+    border-radius: 13px;
+    padding: 5px;
+    background-color: #e3f4f2;
+}
+
