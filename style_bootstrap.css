@@ -46,12 +46,13 @@
 }
 
 .bootstrap .image{
-    perspective: 300px;
+    perspective: 600px;
     width: 50%;
 }
 
 .bootstrap .image img{
-    transform: rotate3d(0, 1, 0, -15deg);
+    /* transform: rotate3d(0, 1, 0, -15deg); */
+    transform: rotateY(-35deg) rotateX(15deg);
     width: 100%;
 
 }

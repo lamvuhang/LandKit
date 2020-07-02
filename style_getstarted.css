@@ -1,0 +1,101 @@
+.wrapper-getstarted{
+    background-color: #1b2b4f;
+    padding-top: 100px;
+}
+
+/* ------------------------css for question div--------------------------------------- */
+
+.question {
+    display: flex;
+    line-height: 1.5;
+}
+
+.question .question-list{
+    width: 50%;
+}
+
+
+
+
+.question .list-left{
+    margin-right: 40px;
+}
+
+
+.question .question-list .question-item{
+    display: flex;
+    margin-bottom: 60px
+}
+
+.question .question-list .question-item .icon{
+    background-color: #44ba96;
+    padding: 7px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    color: white;
+    margin-right: 20px;
+}
+
+
+.question .question-list .question-item .q-a{
+    flex: 1;
+}
+
+
+.question .question-list .question-item .q{
+color: white;
+font-size: 18px;
+}
+
+
+.question .question-list .question-item .a{
+color: #869ab8;
+margin-top: 10px;
+}
+
+/* ------------------------css for get-buy div--------------------------------------- */
+.get-buy{
+    text-align: center;
+    padding: 50px 0px;
+}
+
+.get-buy .label{
+    width: fit-content;
+    margin: auto;
+    background-color: #203055;
+    color: #506690;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.get-buy .title{
+    color: white;
+    font-size: 40px;
+}
+
+.get-buy .text{
+    font-size: 19px;
+    color: #869ab8;
+    font-weight: 300;
+    margin: 30px 150px 40px;
+}
+
+.get-buy .button a{
+    color: white;
+    background-color: #42ba96;
+    padding: 18px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.get-buy .button a:hover{
+    background-color: #42ba96;
+    background-color: #389e7f;
+    transform: translateY(-5px);
+    transition: transform 0.3s;
+    box-shadow: 0 1rem 2.5rem rgba(22,28,45,.1),0 .5rem 1rem -.75rem rgba(22,28,45,.1);
+}

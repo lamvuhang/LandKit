@@ -17,12 +17,17 @@
 
 .customer .title .text2{
     color: #8b9ebb;
-    margin: 20px 0px;
+    margin: 20px 0px 60px;
     line-height: 1.5;
+    font-size: 18px;
 }
 
 .customer .slide{
     display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    position: relative;
 }
 
 .customer .slide .image{
@@ -31,8 +36,61 @@
 
 .customer .slide .image img{
     width: 100%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
+
+.customer .slide .content {
+    text-align: center;
+    margin: 0px 50px;
+}
+
+.customer .slide .content .branch img{
+    width: 150px;
+}
+
+.customer .slide .content .content-text{
+    font-size: 18px;
+    line-height: 2;
+    margin: 30px 0px ;
+}
+
+.customer .slide .content .name{
+    color: #8b8b8b;
+    font-size: 14px;
+}
+
 
 .customer .slide .content{
     width: 50%;
+}
+
+.customer .arrow{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.customer .arrow button{
+    border-radius: 30px;
+    padding: 5px;
+    background-color: #335eea;
+    width: 50px;
+    height: 50px;
+    border: none;
+}
+
+.customer .arrow  .previous{
+    margin-left: -25px;
+}
+
+.customer .arrow .next{
+    margin-right: -25px;
+}
+
+.customer .arrow i{
+    color: white;
+    font-weight: 100;
 }

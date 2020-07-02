@@ -9,7 +9,7 @@
 }
 
 .welcome .content .title p {
-  font-size: 43px;
+  font-size: 42px;
   padding: 3px;
 }
 
@@ -59,4 +59,5 @@
 
 .welcome .image img {
   width: 100%;
+  padding-left: 125px;
 }

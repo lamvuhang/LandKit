@@ -1,0 +1,49 @@
+wrapper-footer{
+    background-color: #f1f4f8;
+    padding-top: 100px;
+}
+
+.footer{
+    display: flex;
+    padding: 80px 0px;
+}
+
+.footer .network{
+    width: 25%;
+}
+
+.footer .network .text{
+    margin: 15px 0px;
+    color: #506690;
+    
+}
+
+.footer .network .image img{
+    padding-right: 10px;
+}
+
+.footer .footer-list {
+    width: 15%;
+    padding-right: 20px;
+}
+
+.footer .footer-list .title{
+    color: #506690;
+    font-size: 13px;
+}
+
+.footer .footer-list .item {
+    margin: 20px 0px;
+}
+
+.footer .footer-list .item a{ 
+    color: #869ab8;
+}
+
+.footer .footer-list .item a:hover{
+    text-decoration: underline;
+}
+
+footer div:last-child{
+    width: 30%;
+}
