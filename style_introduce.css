@@ -22,3 +22,15 @@
   color: #8b9ebb;
   margin-top: 15px;
 }
+
+@media only screen and (max-width: 768px){
+  .introduce{
+    display: flex;
+    flex-direction: column-reverse;
+ }
+
+ .introduce .intro-item{
+   width: 100%;
+   padding-top: 30px;
+ }
+}

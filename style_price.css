@@ -12,9 +12,11 @@
 }
 
 .price .text{
+    line-height: 1.5;
     font-size: 20px;
-   margin: 30px 0px ;
+   margin: 30px auto ;
     color: #506690;
+    max-width: 560px;
 }
 .price .toggle{
     color: #8b9ebb;
@@ -61,7 +63,6 @@
 .price .card .card-left .list{
     text-align: left;
     margin: 50px 80px;
-
 }
 
 .price .card .card-left .list .list-item {
@@ -166,4 +167,47 @@ border-radius: 34px;
 
 .slider.round:before {
 border-radius: 50%;
+}
+
+@media only screen and (max-width: 992px){
+    .price .title{
+        font-size: 30px;
+    }
+    
+    .price .text{
+        font-size: 18px;
+        color: #506690;
+    }
+    .price .card .card-right .text-content{
+        margin: 100px 45px;
+        font-size: 20px;
+    }
+
+    .price .card .card-left .list{
+        text-align: left;
+        margin: 50px 40px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .price .card{
+        flex-direction: column;
+    }
+
+    .price .card .card-item{
+        width: 100%;
+    }
+
+    .price .card .card-right{
+        margin-top: 40px;
+        border-radius: 10px;
+    }
+    .price .card .card-right .button{
+        border-bottom-left-radius: 10px;
+    }
+    .price .card .card-right .text-content{
+        margin: 40px 45px;
+        font-size: 20px;
+    }
+
 }

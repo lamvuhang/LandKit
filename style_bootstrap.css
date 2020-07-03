@@ -6,21 +6,12 @@
 .bootstrap{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .bootstrap .content{
     width: 50%;
     line-height: 1.5;
-    font-size: 18px;
-}
-
-.bootstrap .content .title{
-    font-size: 30px;
-}
-
-.bootstrap .content .text{
-    margin: 15px 0px;
-    color: #8b9ebb;
 }
 
 .bootstrap .content .item{
@@ -35,24 +26,59 @@
     margin-right: 25px;
 }
 
-.bootstrap .content .item .item-content p:last-child{
-    color: #8b9ebb;
-    font-size: 16px;
-
-}
-
 .bootstrap .content .item .icon img{
     width: 50px;
 }
 
 .bootstrap .image{
-    perspective: 600px;
+    perspective: 1000px;
     width: 50%;
+    background-image: url("images/bg_bootstrap.svg");
+    background-size: 125%;
+
+   
 }
 
 .bootstrap .image img{
     /* transform: rotate3d(0, 1, 0, -15deg); */
     transform: rotateY(-35deg) rotateX(15deg);
-    width: 100%;
+    width: 135%;
+    box-shadow: 0 1.5rem 4rem rgba(22,28,45,.15);
+    border-radius: 10px;
+    
+}
 
+@media only screen and (max-width: 992px){
+    .bootstrap .content{
+        width: 60%;
+    }
+
+    .bootstrap .image{
+        width: 35%;
+        background-size: 157%;
+    }
+
+    .bootstrap .image img{
+        width: 155%;
+        
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .bootstrap{
+        flex-direction: column;
+    }
+
+    .bootstrap .content{
+        width: 100%;
+    }
+
+    .bootstrap .image{
+        width: 100%;
+        background-size: 100%;
+    }
+
+    .bootstrap .image img{
+        width: 100%;
+    }
 }

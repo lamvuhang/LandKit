@@ -1,24 +1,3 @@
-body {
-  margin: 10px 0px !important;
-  font-family: 'Roboto', sans-serif;
-}
-
-.container {
-  margin: 0px 145px;
-}
-
-li {
-  list-style: none;
-}
-
-h4,h3,
-p {
-  margin: 0 !important;
-}
-
-a {
-  text-decoration: none;
-}
 
 .header {
   display: flex;
@@ -26,12 +5,16 @@ a {
   align-items: center;
 }
 
+.header .menu-bar{
+  display: none;
+}
+
 .header .btn-header a {
   background-color: #007bff;
   padding: 15px 20px;
   border-radius: 7px;
   color: white;
-  font-weight: 600;
+  font-weight: 400;
   display: block;
 }
 
@@ -59,6 +42,7 @@ a {
 
 .header .dropdown > li > p {
   color: #506690;
+  font-weight: 400;
 }
 
 .header .dropdown li {
@@ -106,6 +90,10 @@ a {
 
 .header .dropdown .menu-content .picture .pic-content {
   text-align: center;
+}
+
+.header .dropdown .menu-content .picture .pic-content h3{
+  font-weight: 400;
 }
 
 .header .dropdown .menu-content .picture .pic-btn {
@@ -207,14 +195,8 @@ a {
   display: flex;
   align-items: center;
   border-bottom: 1px solid lightgray;
-  padding: 8px 10px 20px;
+  padding: 8px 0px 20px;
   width: 100%;
-}
-
-.header .dropdown .menu-content .doc-item .doc-icon i {
-  font-size: 30px;
-  color: #b2c6ea;
-  padding-right: 20px;
 }
 
 .header .dropdown .menu-content .doc-item .doc-content{
@@ -230,6 +212,11 @@ a {
   color: black;
   padding-top: 10px;
   font-size: 14px;
+}
+
+.header .dropdown .menu-content .doc-item .doc-icon img{
+  width: 35px;
+  padding-right: 15px;
 }
 
 .header li:hover {
@@ -267,4 +254,30 @@ a {
 
 .header .dropdown .menu-content .menu-item li:hover i {
   color: #335eea;
+}
+
+
+
+@media only screen and (max-width: 992px) {
+  .header .menu{
+    display: none;
+  }
+
+  .header  .btn-header{
+    display: none;
+  }
+
+  .header .menu-bar{
+    display: block;
+  }
+
+  .header .menu-bar i{
+    font-size: 27px;
+    font-weight: 300;
+    color: #506690;
+  }
+
+  .header{
+    margin-top: 30px;
+  }
 }

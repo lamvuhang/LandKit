@@ -2,23 +2,17 @@
   display: flex;
   align-items: center;
   margin-top: 100px;
+  
 }
 
 .welcome .content {
-  width: 40%;
+  width: 50%;
 }
 
 .welcome .content .title p {
-  font-size: 42px;
   padding: 3px;
 }
 
-.welcome .content .text {
-  font-size: 19px;
-  color: #8b9ebb;
-  padding-top: 20px;
-  line-height: 1.5;
-}
 
 .welcome .content .button {
   padding-top: 70px;
@@ -38,6 +32,11 @@
 .welcome .content .button .dark {
   background-color: #335eea;
   color: white;
+  margin-right: 5px;
+}
+
+.welcome .content .button .dark i{
+  padding-left: 10px;
 }
 
 .welcome .content .button .dark:hover {
@@ -54,10 +53,52 @@
 }
 
 .welcome .image {
-  width: 60%;
+  width: 50%;
+ 
 }
 
 .welcome .image img {
+  width: 129%;
+}
+
+@media only screen and (max-width: 992px){
+  .welcome .content{
+    width: 60%;
+  }
+
+  .welcome .image{
+    width: 40%;
+  }
+  .welcome .image img {
+    width: 123%;
+  }
+  .welcome .content .button {
+    padding-top: 40px;
+  }
+}
+
+@media only screen and (max-width: 768px){
+.welcome{
+  flex-direction: column-reverse;
+}
+
+.welcome .content{
   width: 100%;
-  padding-left: 125px;
+}
+
+.welcome .image{
+  width: 100%;
+}
+
+.welcome .image img{
+  width: 100%;
+}
+
+.welcome .content{
+  text-align: center;
+}
+
+.welcome .content .button .dark i{
+  display: none;
+}
 }

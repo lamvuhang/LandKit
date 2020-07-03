@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landkit</title>
+    <link rel="stylesheet" href="common.css" />
     <link rel="stylesheet" href="style_menu.css" />
     <link rel="stylesheet" href="style_welcome.css" />
     <link rel="stylesheet" href="style_introduce.css" />
@@ -201,7 +202,7 @@
                   <li>
                     <div class="doc-item">
                       <div class="doc-icon">
-                        <i class="fal fa-clipboard-list"></i>
+                        <img src="images/doc1.svg" alt="">
                       </div>
                       <div class="doc-content">
                         <h4>DOCUMENTATION</h4>
@@ -212,7 +213,7 @@
                   <li>
                     <div class="doc-item">
                       <div class="doc-icon">
-                        <i class="fad fa-th-large"></i>
+                        <img src="images/doc2.svg" alt="">
                       </div>
                       <div class="doc-content">
                         <h4>COMPONENTS</h4>
@@ -223,7 +224,7 @@
                   <li>
                     <div class="doc-item">
                       <div class="doc-icon">
-                        <i class="fal fa-file-alt"></i>
+                        <img src="images/doc3.svg" alt="">
                       </div>
                       <div class="doc-content">
                         <h4>CHANGELOG</h4>
@@ -243,15 +244,18 @@
       <div class="btn-header">
         <a href="">Buy Now</a>
       </div>
+      <div class="menu-bar">
+        <i class="fas fa-bars"></i>
+      </div>
     </div>
 
     <div class="welcome container">
       <div class="content">
-        <div class="title">
+        <div class="title title-large">
           <p>Welcome to <span style="color: #335eea;">Landkit</span>.</p>
           <p>Develop anything.</p>
         </div>
-        <div class="text">
+        <div class="text content-large">
           Build a beautiful, modern website with flexible Bootstrap components
           built from scratch.
         </div>
@@ -272,8 +276,8 @@
         <div class="icon">
           <img src="images/toggle.svg" alt="" />
         </div>
-        <div class="title">Built for developers</div>
-        <div class="content">
+        <div class="title title-small">Built for developers</div>
+        <div class="content content-small">
           Landkit is built to make your life easier. Variables, build tooling,
           documentation, and reusable components.
         </div>
@@ -282,8 +286,8 @@
         <div class="icon">
           <img src="images/component.svg" alt="" />
         </div>
-        <div class="title">Designed to be modern</div>
-        <div class="content">
+        <div class="title title-small">Designed to be modern</div>
+        <div class="content content-small">
           Designed with the latest design trends in mind. Landkit feels modern,
           minimal, and beautiful.
         </div>
@@ -292,8 +296,8 @@
         <div class="icon">
           <img src="images/closetag.svg" alt="" />
         </div>
-        <div class="title">Documentation for everything</div>
-        <div class="content">
+        <div class="title title-small">Documentation for everything</div>
+        <div class="content content-small">
           We've written extensive documentation for components and tools, so you
           never have to reverse engineer anything.
         </div>
@@ -328,6 +332,11 @@
         <div class="form">
           <div class="form-image">
             <img src="images/photo-2.jpg" alt="">
+            <div class="position-relative">
+              <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+                <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path></svg>
+              </div>
+            </div>
           </div>
           <div class="form-input">
             <input type="text" class="input-item" placeholder="Name"> 
@@ -339,30 +348,26 @@
           </div>
         </div>
         <div class="content">
-          <div class="title">
+          <div class="title title-medium">
             The most useful resource <br>
             <span style="color: #42ba96;">created for developers.</span> 
           </div>
-          <div class="text">
+          <div class="text content-medium">
             Using Landkit to build your site means never worrying about designing another page or cross browser compatibility. Our ever-growing library of components and pre-designed layouts will make your life easier.
           </div>
           <div class="list">
-            <div class="list-child list-left">
-              <div class="list-item">
-                <i class="fas fa-check"></i>Lifetime updates
-              </div>
-              <div class="list-item">
-                <i class="fas fa-check"></i>Tons of assets
-              </div>
+            <div class="list-item">
+              <i class="fas fa-check"></i>Lifetime updates
             </div>
-            <div class="list-child list-right">
-              <div class="list-item">
-                <i class="fas fa-check"></i>Tech support
-              </div>
-              <div class="list-item">
-                <i class="fas fa-check"></i>Integration ready
-              </div> 
+            <div class="list-item">
+              <i class="fas fa-check"></i>Tons of assets
             </div>
+            <div class="list-item">
+              <i class="fas fa-check"></i>Tech support
+            </div>
+            <div class="list-item">
+              <i class="fas fa-check"></i>Integration ready
+            </div> 
           </div>
         </div>
       </div>
@@ -371,11 +376,11 @@
     <div class="wrapper-bootstrap">
       <div class="bootstrap container">
         <div class="content">
-          <div class="title">
+          <div class="title title-medium">
             We have lots of experience <br>
             <span style="color: #335eea;">building Bootstrap themes</span>.
           </div>
-          <div class="text">
+          <div class="text content-medium">
             We've built well over a dozen Bootstrap themes and sold tens of thousands of copies.
           </div>
           <div class="item item-1">
@@ -383,8 +388,8 @@
               <img src="images/circle.svg" alt="">
             </div>
             <div class="item-content">
-              <p>Bootstrap users since the beginning</p>
-              <p>We've been developing with Bootstrap since it was publicly released in 2011.</p>
+              <p class="title-small">Bootstrap users since the beginning</p>
+              <p class="content-small">We've been developing with Bootstrap since it was publicly released in 2011.</p>
             </div>
           </div>
           <div class="item item-2">
@@ -392,8 +397,8 @@
               <img src="images/closetag.svg" alt="">
             </div>
             <div class="item-content">
-              <p>Deep understanding of Bootstrap</p>
-              <p>We've watched Bootstrap grow up over the years and understand it better than almost anyone.</p>
+              <p class="title-small">Deep understanding of Bootstrap</p>
+              <p class="content-small">We've watched Bootstrap grow up over the years and understand it better than almost anyone.</p>
             </div>
           </div>
         </div>
@@ -406,10 +411,10 @@
     <div class="wrapper-customer">
       <div class="customer container">
         <div class="title">
-          <div class="text1">
+          <div class="text1 title-medium">
             Our customers are our biggest fans.
           </div>
-          <div class="text2">
+          <div class="text2 content-medium">
             We dont' like to brag, but we don't mind letting our customers do it for us. <br>
             Here are a few nice things folks have said about our themes over the years.
           </div>
@@ -445,11 +450,11 @@
     <div class="wrapper-business">
       <div class="business container">
         <div class="content">
-          <div class="title">
+          <div class="title title-medium">
             Stay focused on your business.<br>
             <span style="color: #335eea;">Let us handle the design</span>.
           </div>
-          <div class="text">
+          <div class="text content-medium">
             You have a business to run. Stop worring about cross-browser bugs, designing new pages, keeping your components up to date. Let us do that for you.
           </div>
           <div  class="data">
@@ -487,7 +492,7 @@
 
     <div class="wrapper-price">
       <div class="price container">
-        <div class="title">
+        <div class="title ">
           Fair, simple pricing for all.
         </div>
         <div class="text">
@@ -557,51 +562,47 @@
 
     <div class="wrapper-getstarted">
       <div class="question container">
-        <div class="question-list list-left">
-          <div class="question-item">
-            <div class="icon">?</div>
-            <div class="q-a">
-              <div class="q">
-                Can I use Landkit for my clients?
-              </div>
-              <div class="a">
-                Absolutely. The Bootstrap Themes license allows you to build a websites for personal use or for a client.
-              </div>
+        <div class="question-item">
+          <div class="icon">?</div>
+          <div class="q-a">
+            <div class="q title-small">
+              Can I use Landkit for my clients?
             </div>
-          </div>
-          <div class="question-item">
-            <div class="icon">?</div>
-            <div class="q-a">
-              <div class="q">
-                Do I get free updates?
-              </div>
-              <div class="a">
-                Yes. We update all of our themes with each Bootstrap update, plus are constantly adding new components, pages, and features to our themes.
-              </div>
+            <div class="a content-small">
+              Absolutely. The Bootstrap Themes license allows you to build a websites for personal use or for a client.
             </div>
           </div>
         </div>
-        <div class="question-list list-right">
-          <div class="question-item">
-            <div class="icon">?</div>
-            <div class="q-a">
-              <div class="q">
-                Is there a money back guarantee?
-              </div>
-              <div class="a">
-                Yup! Bootstrap Themes come with a satisfaction guarantee. Submit a return and get your money back.
-              </div>
+        <div class="question-item">
+          <div class="icon">?</div>
+          <div class="q-a">
+            <div class="q title-small">
+              Do I get free updates?
+            </div>
+            <div class="a content-small">
+              Yes. We update all of our themes with each Bootstrap update, plus are constantly adding new components, pages, and features to our themes.
             </div>
           </div>
-          <div class="question-item">
-            <div class="icon">?</div>
-            <div class="q-a">
-              <div class="q">
-                Does it work with Rails? React? Laravel?
-              </div>
-              <div class="a">
-                Yes. Landkit has basic CSS/JS files you can include. If you want to enable deeper customization, you can integrate it into your assets pipeline or build processes.
-              </div>
+        </div>
+        <div class="question-item">
+          <div class="icon">?</div>
+          <div class="q-a">
+            <div class="q title-small">
+              Is there a money back guarantee?
+            </div>
+            <div class="a content-small">
+              Yup! Bootstrap Themes come with a satisfaction guarantee. Submit a return and get your money back.
+            </div>
+          </div>
+        </div>
+        <div class="question-item">
+          <div class="icon">?</div>
+          <div class="q-a">
+            <div class="q title-small">
+              Does it work with Rails? React? Laravel?
+            </div>
+            <div class="a content-small">
+              Yes. Landkit has basic CSS/JS files you can include. If you want to enable deeper customization, you can integrate it into your assets pipeline or build processes.
             </div>
           </div>
         </div>
@@ -610,10 +611,10 @@
         <div class="label">
           GET STARTED
         </div>
-        <div class="title">
+        <div class="title title-large">
           Get Landkit and save your time.
         </div>
-        <div class="text">
+        <div class="text content-large">
           Stop wasting time trying to do it the "right way" and build a site from scratch. Landkit is faster, easier, and you still have complete control.
         </div>
         <div class="button">
@@ -640,84 +641,87 @@
             <img src="images/pinterest (1).svg" alt="">
           </div>
         </div>
-        <div class="footer-list">
-          <span class="title">
-            PRODUCT
-          </span>
-          <div class="item">
-            <a href="">Page Builder</a>
+        <div class="infor">
+          <div class="footer-list">
+            <span class="title">
+              PRODUCT
+            </span>
+            <div class="item">
+              <a href="">Page Builder</a>
+            </div>
+            <div class="item">
+              <a href="">UI Kit</a>
+            </div>
+            <div class="item">
+              <a href="">Styleguide</a>
+            </div>
+            <div class="item">
+              <a href="">Documentation</a>
+            </div>
+            <div class="item">
+              <a href="">Changelog</a>
+            </div>
           </div>
-          <div class="item">
-            <a href="">UI Kit</a>
+          <div class="footer-list">
+            <span class="title">
+              SERVICES
+            </span>
+            <div class="item">
+              <a href="">Documentation</a>
+            </div>
+            <div class="item">
+              <a href="">Changelog</a>
+            </div>
+            <div class="item">
+              <a href="">Pagebuilder</a>
+            </div>
+            <div class="item">
+              <a href="">UI Kit</a>
+            </div>
           </div>
-          <div class="item">
-            <a href="">Styleguide</a>
+          <div class="footer-list">
+            <span class="title">
+              CONNECT
+            </span>
+            <div class="item">
+              <a href="">Page Builder</a>
+            </div>
+            <div class="item">
+              <a href="">UI Kit</a>
+              
+            </div>
+            <div class="item">
+              <a href="">Styleguide</a>
+            </div>
+            <div class="item">
+              <a href="">Documentation</a>
+            </div>
+            <div class="item">
+              <a href="">Changelog</a>
+            </div>
+            <div class="item">
+              <a href="">Documentation</a>
+            </div>
+            <div class="item">
+              <a href="">Changelog</a>
+            </div>
           </div>
-          <div class="item">
-            <a href="">Documentation</a>
-          </div>
-          <div class="item">
-            <a href="">Changelog</a>
+          <div class="footer-list">
+            <span class="title">
+              LEGAL
+            </span>
+            <div class="item">
+              <a href="">Documentation</a>
+            </div>
+            <div class="item">
+              <a href="">Changelog</a>
+            </div>
+            <div class="item">
+              <a href="">Pagebuilder</a>
+            </div>
           </div>
         </div>
-        <div class="footer-list">
-          <span class="title">
-            SERVICES
-          </span>
-          <div class="item">
-            <a href="">Documentation</a>
-          </div>
-          <div class="item">
-            <a href="">Changelog</a>
-          </div>
-          <div class="item">
-            <a href="">Pagebuilder</a>
-          </div>
-          <div class="item">
-            <a href="">UI Kit</a>
-          </div>
-        </div>
-        <div class="footer-list">
-          <span class="title">
-            CONNECT
-          </span>
-          <div class="item">
-            <a href="">Page Builder</a>
-          </div>
-          <div class="item">
-            <a href="">UI Kit</a>
-            
-          </div>
-          <div class="item">
-            <a href="">Styleguide</a>
-          </div>
-          <div class="item">
-            <a href="">Documentation</a>
-          </div>
-          <div class="item">
-            <a href="">Changelog</a>
-          </div>
-          <div class="item">
-            <a href="">Documentation</a>
-          </div>
-          <div class="item">
-            <a href="">Changelog</a>
-          </div>
-        </div>
-        <div class="footer-list">
-          <span class="title">
-            LEGAL
-          </span>
-          <div class="item">
-            <a href="">Documentation</a>
-          </div>
-          <div class="item">
-            <a href="">Changelog</a>
-          </div>
-          <div class="item">
-            <a href="">Pagebuilder</a>
-          </div>
-        </div>
+        
       </div>
     </div>
     

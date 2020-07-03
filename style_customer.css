@@ -3,23 +3,12 @@
     padding-top: 100px;
 }
 
-.customer{
-    
-}
-
 .customer .title {
     text-align: center;
 }
 
-.customer .title .text1{
-    font-size: 30px;
-}
-
 .customer .title .text2{
-    color: #8b9ebb;
     margin: 20px 0px 60px;
-    line-height: 1.5;
-    font-size: 18px;
 }
 
 .customer .slide{
@@ -28,21 +17,25 @@
     background-color: white;
     border-radius: 8px;
     position: relative;
+    height: 400px;
 }
 
 .customer .slide .image{
     width: 50%;
+    height: inherit;
 }
 
 .customer .slide .image img{
     width: 100%;
+    height: inherit;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+    object-fit: cover;
 }
 
 .customer .slide .content {
     text-align: center;
-    margin: 0px 50px;
+    padding: 0px 50px;
 }
 
 .customer .slide .content .branch img{
@@ -93,4 +86,34 @@
 .customer .arrow i{
     color: white;
     font-weight: 100;
+}
+
+
+@media only screen and (max-width: 768px){
+    .customer .slide {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .customer .slide .image{
+        width: 100%;
+    }
+
+    .customer .slide .image img{
+        border-radius: 0px;
+    }
+
+    .customer .slide .content{
+        width: 100%;
+        padding: 20px 20px;
+    }
+
+    .customer .arrow {
+        bottom: 95px;
+    }
+
+    .customer .slide .content .branch img{
+        width: 120px;
+    }
+    
 }

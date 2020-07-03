@@ -5,11 +5,14 @@ wrapper-footer{
 
 .footer{
     display: flex;
+    flex-wrap: wrap;
     padding: 80px 0px;
+    justify-content: space-evenly;
 }
 
 .footer .network{
-    width: 25%;
+    width: 30%;
+    padding-left: 40px;
 }
 
 .footer .network .text{
@@ -22,8 +25,14 @@ wrapper-footer{
     padding-right: 10px;
 }
 
-.footer .footer-list {
-    width: 15%;
+.footer .infor{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer  .infor .footer-list {
+    width: 25%;
     padding-right: 20px;
 }
 
@@ -44,6 +53,26 @@ wrapper-footer{
     text-decoration: underline;
 }
 
-footer div:last-child{
-    width: 30%;
+
+
+@media only screen and (max-width: 992px){
+    .footer .infor .footer-list {
+        width: 50%;
+        margin-top: 20px;
+    }
+    
+} 
+
+@media only screen and (max-width: 768px){
+    .footer{
+        flex-direction: column;
+    }
+
+    .footer .infor{
+        width: 100%;
+    }
+
+    .footer .network{
+        padding: 0px;
+    }
 }

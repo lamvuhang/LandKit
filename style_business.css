@@ -5,23 +5,14 @@
 
 .business{
     display: flex;
-
+    justify-content: space-between;
+    align-items: center;
 }
 
 .business .content{
     width: 50%;
 }
 
-.business .content .title{
-    font-size: 30px;
-}
-
-.business .content .text{
-    color: #8b9ebb;
-    margin: 20px 0px ;
-    line-height: 1.5;
-    font-size: 18px;
-}
 
 .business .content .data{
     display: flex;
@@ -58,4 +49,32 @@
 
 .business .image img{
     width: 100%;
+}
+
+@media only screen and (max-width: 992px){
+    .business .image{
+        width: 40%;
+    }
+    .business .content{
+        width: 60%;
+    }
+    .business .content .data .data-item .number{
+        font-size: 18px;
+    }
+       
+}
+
+@media only screen and (max-width: 768px){
+    .business{
+        flex-direction: column-reverse;
+    }
+
+    .business .content{
+        padding-top: 20px;
+        width: 100%;
+    }
+
+    .business .image{
+        width: 100%;
+    }
 }

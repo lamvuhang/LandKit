@@ -7,14 +7,14 @@
     display: flex;
     font-size: 18px;
     align-items: center;
+    justify-content: space-between;
 }
 
 .download .form{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 40%;
     background-color: white;
-    margin-right: 140px;
     border-radius: 5px;
 }
 
@@ -46,13 +46,13 @@
 }
 
 .download .form .submit{
-    margin: 30px;
+    margin: 30px auto;
 }
 
 .download .form .submit a{
     color: white;
     background-color: #42ba96;
-    padding: 15px 90px;
+    padding: 15px 80px;
     border-radius: 5px;
     text-align: center;
     display: block;
@@ -66,27 +66,21 @@
 }
 
 .download .content{
+    padding-left: 40px;
     width: 50%;
 }
 
-.download .content .title{
-    font-size: 30px;
-}
 
-.download .content .text{
-    line-height: 1.5;
-    color: #8b9ebb;
-    margin: 20px 0px;
-}
 
 .download .content .list{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .download .content .list .list-item {
+    width: 50%;
     color: #42ba96;
-    margin: 15px 0px;
+    margin: 10px 0px;
 }
 
 .download .content .list .list-item i{
@@ -96,5 +90,76 @@
     border-radius: 13px;
     padding: 5px;
     background-color: #e3f4f2;
+}
+
+/* style for curved image in form  */
+.download .position-relative {
+    position: relative!important;
+}
+.download .shape:not([class*=shape-blur]) {
+    overflow: hidden;
+}
+.download .shape-bottom {
+    right: 0;
+    bottom: 4px;
+    left: 0;
+}
+.download .shape {
+    position: absolute;
+    pointer-events: none;
+}
+
+.download .text-white {
+    color: #fff!important;
+}
+.download .shape:not([class*=shape-blur])>* {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+}
+.download .shape-fluid-x>* {
+    width: 100%;
+    height: auto;
+}
+.download .shape-bottom>* {
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+}
+
+.download .shape>* {
+    display: block;
+}
+
+@media only screen and (max-width: 992px) {
+    .download .form{
+        width: 50%;
+    }
+
+    .download .form .submit a{
+        padding: 15px 50px;
+    }
+
+    .download .content .list .list-item{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .download{
+        flex-direction: column-reverse;
+    }
+
+    .download .content{
+        width: 100%;
+        padding-bottom: 40px;
+        padding-left: 0px;
+    }
+
+    .download .form{
+        width: 100%;
+    }
+
+    .download .form .submit a{
+        padding: 15px 80px;
+    }
 }
 
