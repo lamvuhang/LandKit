@@ -5,6 +5,8 @@
 
 .price{
     text-align: center;
+    position: relative;
+    height: 550px;
 }
 
 .price .title{
@@ -30,6 +32,9 @@
     display: flex;
     align-items: center;
     margin-top: 50px;
+    position: absolute;
+    top: 200px;
+    max-width: 940px;
 }
 
 .price .card .card-item{
@@ -190,6 +195,9 @@ border-radius: 50%;
 }
 
 @media only screen and (max-width: 768px){
+    .price{
+        height: 895px;
+    }
     .price .card{
         flex-direction: column;
     }

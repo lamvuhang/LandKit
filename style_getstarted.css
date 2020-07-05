@@ -1,6 +1,6 @@
 .wrapper-getstarted{
     background-color: #1b2b4f;
-    padding-top: 100px;
+    padding-top: 580px;
 }
 
 /* ------------------------css for question div--------------------------------------- */
@@ -93,4 +93,58 @@ margin-top: 10px;
     transform: translateY(-5px);
     transition: transform 0.3s;
     box-shadow: 0 1rem 2.5rem rgba(22,28,45,.1),0 .5rem 1rem -.75rem rgba(22,28,45,.1);
+}
+
+
+/* ------------------------css for curved background--------------------------------------- */
+.mt-n15, .my-n15 {
+    margin-top: -16rem!important;
+}
+
+.text-dark {
+    color: #1b2a4e!important;
+}
+
+.mt-n15 .shape-bottom {
+    right: 0;
+    bottom: 324px;
+    left: 0;
+}
+
+.position-relative {
+    position: relative!important;
+}
+.shape:not([class*=shape-blur]) {
+    overflow: hidden;
+}
+.bottom .shape-bottom {
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.shape {
+    position: absolute;
+    pointer-events: none;
+}
+.text-gray-200 {
+    color: #f1f4f8!important;
+}
+.shape:not([class*=shape-blur])>* {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+}
+.shape-fluid-x>* {
+    width: 100%;
+    height: auto;
+}
+.shape-bottom>* {
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+}
+.shape>* {
+    display: block;
+}
+svg {
+    overflow: hidden;
+    vertical-align: middle;
 }
