@@ -30,36 +30,48 @@
     border-top-right-radius: 5px;
 }
 
+.download .form form{
+    padding: 20px;
+}
+
+.download .form form .submit {
+    margin-top: 15px;
+}
+
+.download .form form .submit button{
+    border: none;
+    color: white;
+    background-color: #42ba96;
+    width: 100%;
+    padding: 20px 0px;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
 .download .form .form-input{
     display: flex;
     flex-direction: column;
     margin-top: 20px;
 }
 
+.download .form .form-input p{
+    font-size: 12px;
+    color: red;
+    height: 10px;
+}
+
 .download .form .form-input .input-item{
     border: none;
     border-bottom: 1px solid #f1f1f1;
     padding: 10px 0px;
-    margin: 15px 20px;
+    margin: 10px 0px 0px;
     font-size: 16px;
     color: #8b9ebb;
 }
 
-.download .form .submit{
-    margin: 30px auto;
-}
 
-.download .form .submit a{
-    color: white;
-    background-color: #42ba96;
-    padding: 15px 80px;
-    border-radius: 5px;
-    text-align: center;
-    display: block;
-    width: max-content;
-}
 
-.download .form .submit a:hover{
+.download .form .submit button:hover{
     background-color: #389e7f;
     transform: translateY(-5px);
     transition: transform 0.3s;
@@ -134,9 +146,6 @@
         width: 50%;
     }
 
-    .download .form .submit a{
-        padding: 15px 50px;
-    }
 
     .download .content .list .list-item{
         width: 100%;
@@ -158,8 +167,8 @@
         width: 100%;
     }
 
-    .download .form .submit a{
-        padding: 15px 80px;
+    .download .form .submit button{
+        font-size: 16px;
     }
 }
 

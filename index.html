@@ -6,6 +6,7 @@
     <title>Landkit</title>
     <link rel="stylesheet" href="common.css" />
     <link rel="stylesheet" href="style_menu.css" />
+    <link rel="stylesheet" href="style_menu-toggle.css" />
     <link rel="stylesheet" href="style_welcome.css" />
     <link rel="stylesheet" href="style_introduce.css" />
     <link rel="stylesheet" href="style_social.css" />
@@ -27,7 +28,214 @@
     />
   </head>
 
-  <body>
+  <body id="a">
+
+    <div id="menu-toggle" class="menu-toggle" >
+      <button class="close-btn" id="close-btn" onclick="closeMenu()"> 
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="landings wrap-menu">
+        <p>Landings</p>
+        <div class="menu">
+          <div class="menu-left">
+            <ul class="item">
+              <li>SERVICES</li>
+              <li><a href="">Coworking</a></li>
+              <li><a href="">Rental</a></li>
+              <li><a href="">Job Listing</a></li>
+            </ul>
+            <ul class="item">
+              <li>APPS</li>
+              <li><a href="">Desktop</a></li>
+              <li><a href="">Mobile</a></li>
+            </ul>
+          </div>
+          <div class="menu-right">
+            <ul class="item">
+              <li>WEB</li>
+              <li><a href="">Basic</a></li>
+              <li><a href="">Start up (NEW)</a></li>
+              <li><a href="">Enterprise</a></li>
+              <li><a href="">Service</a></li>
+              <li><a href="">Cloud Hosting</a></li>
+              <li><a href="">Agency</a></li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+      <div class="pages wrap-menu">
+        <p>Pages</p>
+        <div class="menu">
+          <div class="menu-left">
+            <ul class="item">
+              <li>CAREER</li>
+              <li><a href="">Listing</a></li>
+              <li><a href="">Rental</a></li>
+              <li><a href="">Opening</a></li>
+              <li>COMPANY</li>
+              <li><a href="">About</a></li>
+              <li><a href="">Pricing</a></li>
+              <li><a href="">Term</a></li>
+            </ul>
+            <ul class="item">
+              <li>HELP CENTER</li>
+              <li><a href="">Overview</a></li>
+              <li><a href="">Article</a></li>
+              <li>CONTACT</li>
+              <li><a href="">Basic</a></li>
+              <li><a href="">Cover</a></li>
+            </ul>
+          </div>
+          <div class="menu-right">
+            <ul class="item">
+              <li>BLOG</li>
+              <li><a href="">Rich View</a></li>
+              <li><a href="">Article</a></li>
+              <li><a href="">Showcaes</a></li>
+              <li><a href="">Search</a></li>
+            </ul>
+            <ul class="item">
+              <li>PORTFOLIO (NEW)</li>
+              <li><a href="">Masonry</a></li>
+              <li><a href="">Grid Rows</a></li>
+              <li><a href="">Parallax</a></li>
+              <li><a href="">Case Study</a></li>
+              <li><a href="">Sidebar</a></li>
+              <li><a href="">Sidebar: Fluid</a></li>
+              <li><a href="">Basic grid</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="account wrap-menu" >
+        <p>Account</p>
+        <div class="menu">
+          <ul class="menu-item">
+            <li class="chose">
+              <div class="drop">
+                <a>Setting(NEW)</a>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href=""> General </a></li>
+                  <li><a href=""> Security </a></li>
+                  <li><a href=""> Notifications </a></li>
+                  <li><a href="">Plans & Payment </a></li>
+                  <li><a href="">Users </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="chose"> 
+              <div class="drop">
+                <a>Sign In</a>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href=""> Side Cover </a></li>
+                  <li><a href=""> Illustration </a></li>
+                  <li><a href=""> Basic </a></li>
+                  <li><a href="">Modal Horizontal </a></li>
+                  <li><a href="">Modal Vertical </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="chose">
+              <div class="drop">
+                <a>Sign Up</a>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href=""> Side Cover </a></li>
+                  <li><a href=""> Illustration </a></li>
+                  <li><a href=""> Basic </a></li>
+                  <li><a href="">Modal Horizontal </a></li>
+                  <li><a href="">Modal Vertical </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="chose">
+              <div class="drop">
+                <a>Password Reset</a>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href=""> Side Cover </a></li>
+                  <li><a href=""> Illustration </a></li>
+                  <li><a href=""> Basic </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="chose">
+              <div class="drop">
+                <a>Error</a>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href=""> Side Cover </a></li>
+                  <li><a href=""> Illustration </a></li>
+                  <li><a href=""> Basic </a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="documentation wrap-menu">
+        <p>Documentation</p>
+        <div class="menu">
+          <ul>
+            <li>
+              <div class="doc-item">
+                <div class="doc-icon">
+                  <img src="images/doc1.svg" alt="">
+                </div>
+                <div class="doc-content">
+                  <h4>DOCUMENTATION</h4>
+                  <p>Customizing and building</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="doc-item">
+                <div class="doc-icon">
+                  <img src="images/doc2.svg" alt="">
+                </div>
+                <div class="doc-content">
+                  <h4>COMPONENTS</h4>
+                  <p>Full list of components</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="doc-item" >
+                <div class="doc-icon">
+                  <img src="images/doc3.svg" alt="">
+                </div>
+                <div class="doc-content">
+                  <h4>CHANGELOG</h4>
+                  <p>Keep track of changes</p>
+                </div>
+                <div class="version">
+                  1.2.0
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="button">
+        <a href="">
+          Buy now
+        </a>
+      </div>
+    </div>
+
     <div class="header container">
       <div class="logo">
         <img src="images/brand.svg" alt="" />
@@ -244,9 +452,9 @@
       <div class="btn-header">
         <a href="">Buy Now</a>
       </div>
-      <div class="menu-bar">
+      <button class="menu-bar" id="toggle-btn" onclick="toggle()">
         <i class="fas fa-bars"></i>
-      </div>
+      </button>
     </div>
 
     <div class="welcome container">
@@ -338,14 +546,20 @@
               </div>
             </div>
           </div>
-          <div class="form-input">
-            <input type="text" class="input-item" placeholder="Name"> 
-            <input type="text" class="input-item" placeholder="Email"> 
-            <input type="text" class="input-item" placeholder="Password"> 
-          </div>
-          <div class="submit">
-            <a href="">Download a sample</a>
-          </div>
+          <form action="" name="myform" onsubmit="return validate()">
+            <div class="form-input">
+              <input name="name" type="text" class="input-item" placeholder="Name"> 
+              <p id="text-name"></p>
+              <input name="email" type="text" class="input-item" placeholder="Email"> 
+              <p id="text-email"></p>
+              <input name="password" type="password" class="input-item" placeholder="Password"> 
+              <p id="text-pass"></p>
+            </div>
+            <div class="submit">
+              <button type="submit">Download a sample</button>
+            </div>
+          </form>
+          
         </div>
         <div class="content">
           <div class="title title-medium">
@@ -419,31 +633,92 @@
             Here are a few nice things folks have said about our themes over the years.
           </div>
         </div>
-        <div class="slide">
-          <div class="image">
-            <img src="images/photo-1.jpg" alt="">
-          </div>
-          <div class="content">
-            <div class="branch">
-              <img src="images/airbnbred.svg" alt="">
-            </div>
-            <div class="content-text">
-              "Landkit is hands down the most useful front end Bootstrap theme I've ever used. I can't wait to use it again for my next project."
-            </div>
-            <div class="name">
-              DAVE GAMACHE
+        <div class="slide-wrapper slide-container">
+          <div class="slide-list">
+            <div class="slide-track">
+              <div class="slide slide-item" id="lastSlide">
+                <div class="child">
+                  <div class="image">
+                    <img src="images/photo-2.jpg" alt="">
+                  </div>
+                  <div class="content">
+                    <div class="branch">
+                      <img src="images/airbnbred.svg" alt="">
+                    </div>
+                    <div class="content-text">
+                      "Landkit is hands down the most useful front end Bootstrap theme I've ever used. I can't wait to use it again for my next project."
+                    </div>
+                    <div class="name">
+                      DAVE GAMACHE
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide slide-item">
+                <div class="child">
+                  <div class="image">
+                    <img src="images/photo-1.jpg" alt="">
+                  </div>
+                  <div class="content">
+                    <div class="branch">
+                      <img src="images/airbnbred.svg" alt="">
+                    </div>
+                    <div class="content-text">
+                      "Landkit is hands down the most useful front end Bootstrap theme I've ever used. I can't wait to use it again for my next project."
+                    </div>
+                    <div class="name">
+                      DAVE GAMACHE
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide slide-item">
+                <div class="child">
+                  <div class="image">
+                    <img src="images/photo-2.jpg" alt="">
+                  </div>
+                  <div class="content">
+                    <div class="branch">
+                      <img src="images/airbnbred.svg" alt="">
+                    </div>
+                    <div class="content-text">
+                      "Landkit is hands down the most useful front end Bootstrap theme I've ever used. I can't wait to use it again for my next project."
+                    </div>
+                    <div class="name">
+                      DAVE GAMACHE
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide slide-item" id="firstSlide">
+                <div class="child">
+                  <div class="image">
+                    <img src="images/photo-1.jpg" alt="">
+                  </div>
+                  <div class="content">
+                    <div class="branch">
+                      <img src="images/airbnbred.svg" alt="">
+                    </div>
+                    <div class="content-text">
+                      "Landkit is hands down the most useful front end Bootstrap theme I've ever used. I can't wait to use it again for my next project."
+                    </div>
+                    <div class="name">
+                      DAVE GAMACHE
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="arrow">
-            <button class="previous">
+            <button class="previous" onclick="pre()" >
               <i class="fas fa-arrow-left"></i>
             </button>
-            <button class="next">
+            <button class="next"  onclick="next()">
               <i class="fas fa-arrow-right"></i>
             </button>
           </div>
         </div>
-        
       </div>
     </div>
 
@@ -735,5 +1010,7 @@
       </div>
     </div>
     
+    <script src="javascript.js"></script>
   </body>
+
 </html>

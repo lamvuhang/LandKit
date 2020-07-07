@@ -1,0 +1,154 @@
+.menu-toggle{
+    display: none;
+    position: relative;
+    z-index: 5;
+    background-color: white;
+    padding: 20px;
+}
+
+.menu-toggle p{
+    color: #506690;
+    font-weight: 400;
+}
+
+.menu-toggle ul{
+    padding: 0;
+    width: 100%;
+}
+
+.menu-toggle .wrap-menu{
+    padding: 15px;
+}
+
+.menu-toggle .menu li{
+    color: #335eea;
+    font-size: 13px;
+    padding: 5px 0px;
+    font-weight: 400;
+}
+
+.menu-toggle .menu li a{
+    cursor: pointer;
+    color: #506690;
+    font-size: 15px;
+}
+
+.menu-toggle .menu li i{
+    font-weight: 400;
+    font-size: 10px;
+    color: #506690;
+}
+
+.menu-toggle .menu li a:hover{
+    color: #335eea;
+}
+
+.menu-toggle .menu li a:hover i{
+    color: #335eea;
+}
+
+.menu-toggle .menu .menu-item .drop{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.menu-toggle .close-btn{
+    float: right;
+    border: none;
+    background-color: white;
+    margin-right: 20px;
+}
+
+.menu-toggle .close-btn i{
+    font-size: 20px;
+    font-weight: 300;
+    color: #506690;
+}
+
+.menu-toggle .menu{
+    display: flex;
+}
+
+.menu-toggle .menu .menu-left{
+    width: 50%;
+}
+
+.menu-toggle .menu .menu-right{
+    width: 50%;
+}
+
+.menu-toggle .documentation ul{
+    width: 100%;
+}
+
+.menu-toggle .documentation .menu li:last-child .doc-item {
+    border: none;
+}
+
+.menu-toggle .documentation .menu  li:first-child .doc-item {
+padding-top: 20px;
+}
+
+.menu-toggle .documentation .menu  .doc-item .version {
+border-radius: 10px;
+padding: 5px;
+background-color: #d4e1f9;
+margin-left: 40px;
+}
+
+.menu-toggle .documentation .menu  .doc-item {
+display: flex;
+align-items: center;
+border-bottom: 1px solid lightgray;
+padding: 8px 0px 20px;
+width: 100%;
+}
+
+.menu-toggle .documentation .menu  .doc-item .doc-content{
+width: max-content;
+}
+
+.menu-toggle .documentation .menu  .doc-item .doc-content h4{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.menu-toggle .documentation .menu  .doc-item .doc-content p {
+margin: 0px;
+color: #506690;
+font-size: 15px;
+padding-top: 10px;
+font-weight: 300;
+}
+
+.menu-toggle .documentation .menu  .doc-item .doc-icon img{
+width: 50px;
+padding-right: 15px;
+}
+
+.menu-toggle .button{
+    text-align: center;
+    background-color: blue;
+    padding: 20px 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.menu-toggle .button:hover{
+    transform: translateY(-5px);
+    transition: transform 0.3s;
+}
+
+.menu-toggle .button a{
+    color: white;
+}
+
+.menu-toggle .account .menu .menu-item .sub-menu{
+    display: none;
+}
+
+.menu-toggle .account .menu .menu-item .sub-menu ul{
+    padding-left: 20px;
+}
+
