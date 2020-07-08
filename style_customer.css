@@ -113,15 +113,40 @@
     /* height: 300px; */
 }
 
+.dots{
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.dots .dot-item{
+    padding: 10px;
+    color: #8b8b8b;
+}
+
+.dots .active{
+    color: #335eea;
+}
 
 
 
 /* ////////////////////////////////////////////////////////////////// */
 
+@media only screen and (max-width: 992px){
+    .customer .slide .child{
+        width: 660px;
+    }
+}
+
+
 @media only screen and (max-width: 768px){
     .customer .slide .child {
         flex-direction: column;
         height: auto;
+        width: 480px;
     }
 
     .customer .slide .image{
@@ -146,3 +171,11 @@
     }
     
 }
+
+@media only screen and (max-width: 576px){
+    .customer .slide .child{
+        width: calc(100vw - 75px) !important;
+    }
+}
+
+

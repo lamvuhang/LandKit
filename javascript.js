@@ -1,43 +1,43 @@
 // javascript for menu toggle-----------------------------------------------------------
+var menu =document.getElementById("menu-toggle");
+var a = document.getElementById("a");
+var choses = menu.getElementsByClassName("chose");
+var subMenus = menu.getElementsByClassName("sub-menu");
+var icon= menu.getElementsByClassName("fa-chevron-down");
+
 function toggle(){
-    var menu =document.getElementById("menu-toggle");
     menu.style.display='block';
-    var a = document.getElementById("a");
     a.style.overflowY = "hidden" ;
     menu.style.overflow='scroll';
     menu.style.height = "100vh";
-
-
 }
 
 function closeMenu(){
-document.getElementById("menu-toggle").style.display='none';
+    a.style.overflowY= "auto";
+    menu.style.display='none';
 }
 
-var choses = document.getElementsByClassName("chose");
-
 for(i=0; i < choses.length; i++){
- 
     choses[i].addEventListener('click',function()
-    {
-        var menuToggle = document.getElementById("menu-toggle");  
-        var subMenus = menuToggle.getElementsByClassName("sub-menu");
+    {  
         var child = this.getElementsByClassName('sub-menu');
-       
-         
-           for(j=0; j< subMenus.length; j++){
-            
-          subMenus[j].style.display = 'none';
-        }
-        
-        if(child[0].style.display ==='none'){
+        var iconRotate = this.getElementsByClassName("fa-chevron-down");
+        for(j=0; j< subMenus.length; j++){
+            icon[j].style.transform="rotate(0deg)";
+            if(choses[j] != this){
+                subMenus[j].style.display = 'none';
+                console.log(j);
+            }
+        }     
+
+        if(child[0].style.display ==='none' || child[0].style.display ==="" ){
             child[0].style.display = 'block';
+            iconRotate[0].style.transform="rotate(180deg)";
         }
         else {
             child[0].style.display = 'none';
+            iconRotate[0].style.transform="rotate(0deg)";
         }
-
-      
     });
 }
 
@@ -58,6 +58,8 @@ function validate(){
     var name = document.myform.name.value;
     var email = document.myform.email.value;
     var password = document.myform.password.value;
+
+    var tetxName = document.getElementById("text-name");
 
     if(name == ""){
         document.getElementById("text-name").innerHTML="Name must be filled out";
@@ -92,26 +94,51 @@ function validate(){
 var slideTrack = document.getElementsByClassName("slide-track");
 var slideList = document.getElementsByClassName("slide-list");
 var slideItem =document.getElementsByClassName("slide-item");
+var dotItem = document.getElementsByClassName("dot-item");
 
 isTranslated = true;
 var index = 0;
 
+function run_setInterval(){
+    v_interval = setInterval(()=>{
+        index++;
+        slideTrack[0].style.transform= "translateX(" + (- slideList[0].clientWidth * index) + "px)";
+        slideTrack[0].style.transition = "transform .5s ";
+    }, 4000);
+}
+ 
+function run_clearInterval(){
+    clearInterval(v_interval);
+}
+
+run_setInterval();
+
 
 function next(){
     if(isTranslated){
+        run_clearInterval();
         isTranslated=false;
         index++;
         slideTrack[0].style.transform= "translateX(" + (- slideList[0].clientWidth * index) + "px)";
         slideTrack[0].style.transition = "transform .5s ";
+        run_setInterval();
     }
 }
 
 function pre(){
     if(isTranslated){
+        run_clearInterval();
         isTranslated=false;
+        // if de khi index =0 lui lai khong bi am
+        if(index==0){
+            index = slideItem.length -2;
+            slideTrack[0].style.transform = "translateX(" + (-slideList[0].clientWidth*index) + "px)";
+            slideTrack[0].style.transition = "none";
+        }
         index--;
         slideTrack[0].style.transform= "translateX(" +(-slideList[0].clientWidth *index) + "px)";
         slideTrack[0].style.transition = "transform .5s ";
+        run_setInterval();
     }
     
 }
@@ -119,7 +146,7 @@ function pre(){
 
 slideTrack[0].addEventListener('transitionend', ()=>{
     
-    isTranslated = true; // cho biết thằng carousel nó đã thực hiện xong việc translateX 
+    isTranslated = true; 
     let currentSlide = slideItem[index].id;
 
     if(currentSlide === "firstSlide") {
@@ -132,6 +159,17 @@ slideTrack[0].addEventListener('transitionend', ()=>{
         index = slideItem.length -2;
         slideTrack[0].style.transform = "translateX(" + (-slideList[0].clientWidth*index) + "px)";
         slideTrack[0].style.transition = "none";
+    }
+
+    for(var i=0; i<dotItem.length ; i++){
+        dotItem[i].classList.remove("active");
+    }
+
+    if(index === slideItem.length - 2){
+        dotItem[0].classList.add('active');
+    }
+    else{
+        dotItem[index].classList.add('active');
     }
 
 })
