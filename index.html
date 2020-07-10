@@ -26,12 +26,13 @@
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.11.0/css/all.css"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
   <body id="a">
 
     <div id="menu-toggle" class="menu-toggle" >
-      <button class="close-btn" id="close-btn" onclick="closeMenu()"> 
+      <button class="close-btn" id="close-btn" > 
         <i class="fas fa-times"></i>
       </button>
       <div class="landings wrap-menu">
@@ -115,7 +116,7 @@
             <li class="chose">
               <div class="drop">
                 <a>Setting(NEW)</a>
-                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-down" style="transform: rotate(0deg);"></i>
               </div>
               <div class="sub-menu" >
                 <ul>
@@ -130,7 +131,7 @@
             <li class="chose"> 
               <div class="drop">
                 <a>Sign In</a>
-                <i class="fas fa-chevron-down" ></i>
+                <i class="fas fa-chevron-down"  style="transform: rotate(0deg);"></i>
               </div>
               <div class="sub-menu">
                 <ul>
@@ -145,7 +146,7 @@
             <li class="chose">
               <div class="drop">
                 <a>Sign Up</a>
-                <i class="fas fa-chevron-down" ></i>
+                <i class="fas fa-chevron-down"  style="transform: rotate(0deg);"></i>
               </div>
               <div class="sub-menu">
                 <ul>
@@ -160,7 +161,7 @@
             <li class="chose">
               <div class="drop">
                 <a>Password Reset</a>
-                <i class="fas fa-chevron-down" ></i>
+                <i class="fas fa-chevron-down"  style="transform: rotate(0deg);"></i>
               </div>
               <div class="sub-menu">
                 <ul>
@@ -173,7 +174,7 @@
             <li class="chose">
               <div class="drop">
                 <a>Error</a>
-                <i class="fas fa-chevron-down" ></i>
+                <i class="fas fa-chevron-down"  style="transform: rotate(0deg);"></i>
               </div>
               <div class="sub-menu">
                 <ul>
@@ -452,7 +453,7 @@
       <div class="btn-header">
         <a href="">Buy Now</a>
       </div>
-      <button class="menu-bar" id="toggle-btn" onclick="toggle()">
+      <button class="menu-bar" id="toggle-btn">
         <i class="fas fa-bars"></i>
       </button>
     </div>
@@ -546,17 +547,17 @@
               </div>
             </div>
           </div>
-          <form action="" name="myform" onsubmit="return validate()">
+          <form action="" name="myform" id="myform" >
             <div class="form-input">
-              <input name="name" type="text" class="input-item" placeholder="Name"> 
+              <input name="name" type="text" id="name" class="input-item" placeholder="Name"> 
               <p id="text-name"></p>
-              <input name="email" type="text" class="input-item" placeholder="Email"> 
+              <input name="email" type="text" id="email" class="input-item" placeholder="Email"> 
               <p id="text-email"></p>
-              <input name="password" type="password" class="input-item" placeholder="Password"> 
+              <input name="password" type="password" id="pass" class="input-item" placeholder="Password"> 
               <p id="text-pass"></p>
             </div>
             <div class="submit">
-              <button type="submit">Download a sample</button>
+              <button type="submit" id="submit">Download a sample</button>
             </div>
           </form>
           
@@ -564,7 +565,7 @@
         <div class="content">
           <div class="title title-medium">
             The most useful resource <br>
-            <span style="color: #42ba96;">created for developers.</span> 
+            <span style="color: #42ba96;">created for <span id="import-text"></span><span id="cursor">|</span> </span> 
           </div>
           <div class="text content-medium">
             Using Landkit to build your site means never worrying about designing another page or cross browser compatibility. Our ever-growing library of components and pre-designed layouts will make your life easier.
@@ -634,7 +635,7 @@
           </div>
         </div>
         <div class="slide-wrapper slide-container">
-          <div class="slide-list">
+          <div class="slide-list" >
             <div class="slide-track">
               <div class="slide slide-item" id="lastSlide">
                 <div class="child">
@@ -715,10 +716,10 @@
             </div>
           </div>
           <div class="arrow">
-            <button class="previous" onclick="pre()" >
+            <button class="previous" >
               <i class="fas fa-arrow-left"></i>
             </button>
-            <button class="next"  onclick="next()">
+            <button class="next" >
               <i class="fas fa-arrow-right"></i>
             </button>
           </div>
@@ -787,8 +788,8 @@
         </div>
         <div class="toggle">
           <span>Annual</span>
-          <label class="switch">
-            <input type="checkbox">
+          <label class="switch" >
+            <input type="checkbox" id="toggle">
             <span class="slider round"></span>
           </label>
           <span>Monthly</span>
@@ -800,7 +801,7 @@
             </div>
             <div class="number" style="font-size: 60px;">
               <div>
-                <sup style="font-size: 30px; margin-right: -10px;">$</sup> 29<span style="font-size: 30px; padding-left: 0px;"> /mo</span>
+                <sup style="font-size: 30px; margin-right: -10px;">$</sup> <span id="price">29</span><span style="font-size: 30px; padding-left: 0px;"> /mo</span>
               </div>
             </div>
             <div>
@@ -1022,7 +1023,8 @@
       </div>
     </div>
     
-    <script src="javascript.js"></script>
+    <!-- <script src="javascript.js"></script> -->
+    <script src="jquery.js"></script>
   </body>
 
 </html>

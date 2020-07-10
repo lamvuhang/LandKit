@@ -1,27 +1,29 @@
 // javascript for menu toggle-----------------------------------------------------------
-var menu =document.getElementById("menu-toggle");
-var a = document.getElementById("a");
-var choses = menu.getElementsByClassName("chose");
-var subMenus = menu.getElementsByClassName("sub-menu");
-var icon= menu.getElementsByClassName("fa-chevron-down");
+const menu =document.getElementById("menu-toggle");
+const a = document.getElementById("a");
+const choses = menu.getElementsByClassName("chose");
+const subMenus = menu.getElementsByClassName("sub-menu");
+const icon= menu.getElementsByClassName("fa-chevron-down");
+const showBtn = document.getElementById("toggle-btn");
+const hideBtn = document.getElementById("close-btn"); 
 
-function toggle(){
+showBtn.addEventListener("click", function toggle(){
     menu.style.display='block';
     a.style.overflowY = "hidden" ;
     menu.style.overflow='scroll';
     menu.style.height = "100vh";
-}
+})
 
-function closeMenu(){
+hideBtn.addEventListener("click", function closeMenu(){
     a.style.overflowY= "auto";
     menu.style.display='none';
-}
+})
 
-for(i=0; i < choses.length; i++){
+for(let i=0; i < choses.length; i++){
     choses[i].addEventListener('click',function()
     {  
-        var child = this.getElementsByClassName('sub-menu');
-        var iconRotate = this.getElementsByClassName("fa-chevron-down");
+        let child = this.getElementsByClassName('sub-menu');
+        let iconRotate = this.getElementsByClassName("fa-chevron-down");
         for(j=0; j< subMenus.length; j++){
             icon[j].style.transform="rotate(0deg)";
             if(choses[j] != this){
@@ -44,60 +46,76 @@ for(i=0; i < choses.length; i++){
 
 
 // javascript for validate form---------------------------------------------------------
+const myForm = document.getElementById("myform");
+
 function validateEmail(email){
-    var a = email.indexOf("@");
-    var dot = email.indexOf(".");
+    let a = email.indexOf("@");
+    let dot = email.indexOf(".");
     if(a<1 || dot < a + 2 || dot == email.length -1){
         return true;
     }
-    else return false;
-
+    return false;
 }
 
-function validate(){
-    var name = document.myform.name.value;
-    var email = document.myform.email.value;
-    var password = document.myform.password.value;
+myForm.addEventListener("submit", function validate(event){
+    event.preventDefault();
+    const name = document.myform.name.value;
+    const email = document.myform.email.value;
+    const password = document.myform.password.value;
 
-    var tetxName = document.getElementById("text-name");
+    let textName = document.getElementById("text-name");
+    let textEmail = document.getElementById("text-email");
+    let textPass = document.getElementById("text-pass");
 
-    if(name == ""){
-        document.getElementById("text-name").innerHTML="Name must be filled out";
+    if(name === ""){
+        textName.innerHTML="Name must be filled out";
         document.myform.name.focus();
-        return false;
+        //return false;
     }
     else if(email == "" || validateEmail(email) ){
-        document.getElementById("text-name").innerHTML="";
-        document.getElementById("text-email").innerHTML="Invalid email";
+        textName.innerHTML="";
+        textEmail.innerHTML="Invalid email";
         document.myform.email.focus();
-        return false;
+       // return false;
     }
     else if(password == "" || password.length<8){
-        document.getElementById("text-name").innerHTML="";
-        document.getElementById("text-email").innerHTML="";
-        document.getElementById("text-pass").innerHTML="Invalid password";
+        textName.innerHTML="";
+        textEmail.innerHTML="";
+        textPass.innerHTML="Invalid password";
         document.myform.password.focus();
-        return false;
+      //  return false;
     }
     else{
+        textName.innerHTML="";
+        textEmail.innerHTML="";
+        textPass.innerHTML="";
         console.log("Entered data: ");
         console.log("Name: "+ name);
         console.log("Email: "+ email);
         console.log("Password: "+ password);
-        return false;
+      //  return true;
     }
-}
-
+});
 
 // javascript for slideshow---------------------------------------------------------
 
-var slideTrack = document.getElementsByClassName("slide-track");
-var slideList = document.getElementsByClassName("slide-list");
-var slideItem =document.getElementsByClassName("slide-item");
-var dotItem = document.getElementsByClassName("dot-item");
+const slideTrack = document.getElementsByClassName("slide-track");
+const slideList = document.getElementsByClassName("slide-list");
+const slideItem =document.getElementsByClassName("slide-item");
+const dotItem = document.getElementsByClassName("dot-item");
+const preBtn = document.getElementsByClassName("previous")[0];
+const nextBtn = document.getElementsByClassName("next")[0];
 
 isTranslated = true;
-var index = 0;
+let index = 0;
+
+slideList[0].addEventListener("mouseover", function hovering(){
+    run_clearInterval();
+} )
+
+slideList[0].addEventListener("mouseout", function hovering(){
+    run_setInterval();
+} )
 
 function run_setInterval(){
     v_interval = setInterval(()=>{
@@ -114,7 +132,7 @@ function run_clearInterval(){
 run_setInterval();
 
 
-function next(){
+nextBtn.addEventListener("click", function next(){
     if(isTranslated){
         run_clearInterval();
         isTranslated=false;
@@ -123,9 +141,10 @@ function next(){
         slideTrack[0].style.transition = "transform .5s ";
         run_setInterval();
     }
-}
+})
 
-function pre(){
+
+preBtn.addEventListener("click",function pre(){
     if(isTranslated){
         run_clearInterval();
         isTranslated=false;
@@ -141,7 +160,8 @@ function pre(){
         run_setInterval();
     }
     
-}
+} )
+
 
 
 slideTrack[0].addEventListener('transitionend', ()=>{
@@ -161,7 +181,7 @@ slideTrack[0].addEventListener('transitionend', ()=>{
         slideTrack[0].style.transition = "none";
     }
 
-    for(var i=0; i<dotItem.length ; i++){
+    for(let i=0; i<dotItem.length ; i++){
         dotItem[i].classList.remove("active");
     }
 
@@ -173,3 +193,72 @@ slideTrack[0].addEventListener('transitionend', ()=>{
     }
 
 })
+
+
+// javascript for text in dowload part---------------------------------------------------------
+const importText = document.getElementById("import-text");
+const cursorEle = document.getElementById("cursor");
+
+function delay(ms) {
+    return new Promise(res => setTimeout(res, ms));
+   }
+
+const strings = ["designers.", "developers.", "founders." ]
+let text="";
+let cursor = true;
+    
+async function fillText() {
+    while(true){
+        for (let i = 0; i < strings.length; i++) {
+            for(let j =0; j<strings[i].length; j++){
+                text += strings[i].charAt(j);
+                importText.innerHTML = text ;
+                await delay (50);
+            }
+            
+            let blink = setInterval(() => {
+            if(cursor) {
+                cursorEle.style.opacity = 0;
+                cursorEle.style.transition ="opacity 0.3s";
+                cursor = false;
+            }else {
+                cursorEle.style.opacity = 1;
+                cursorEle.style.transition ="opacity 0.3s";
+                cursor = true;
+            }
+            },250);
+
+            await delay(1000);
+            clearInterval(blink);
+
+            for( let x =strings[i].length; x >= 0; x--){
+                text = strings[i].substr(0, x);
+                importText.innerHTML = text ;
+                await delay (50);
+            }
+            await delay(100);
+        }
+    }
+}
+
+fillText();
+
+// javascript for switch in price part---------------------------------------------------------
+const price = document.getElementById("price");
+const swap = document.getElementById("toggle");
+
+swap.addEventListener('click', async function(){
+    console.log(swap.checked);
+    if(swap.checked){
+        for( let i = 29 ; i <= 49 ; i++){
+            price.innerHTML = i;
+             await delay(50);
+        }
+    }
+    else {
+        for( let j = 49 ; j >= 29 ; j--){
+            price.innerHTML = j;
+             await delay(50);
+        }
+    }
+} )
